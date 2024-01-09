@@ -3,26 +3,20 @@
 
 #include <iostream>
 
-#include"Livre.h"
+#include "Livre.h"
 
 using namespace std;
 
 class Roman : public Livre {
 
-    private :
-
+private:
     string genre;
 
-    private : 
-
-    Roman (string auteur, string titre, string editeur, string isbn, string public_vise, string etats, string genre);
-
-    string getGenre ();
-
-    void setGenre (string genre);
-
-    void affiche();
-
+public: 
+            Roman   (string auteur, string titre, string editeur, string isbn, string public_vise, string etats, string genre)  ;
+    string  getGenre()                                                                                                          ;
+    void    setGenre(string genre)                                                                                              ;
+    void    affiche ()                                                                                                          ;
 };
 
 #endif /* ROMAN_H_ */

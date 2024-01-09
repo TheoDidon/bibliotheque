@@ -1,6 +1,6 @@
 ## This project is made during the POO option in ECM
 
-Initialiser le projet sur sa machine
+# Initialiser le projet sur sa machine
 git init
 
 git config --global user.name 'Prenom'
@@ -9,7 +9,8 @@ git config --global user.email 'tonadresse@gmail.com'
 
 git remote add origin https://github.com/TheoDidon/bibliotheque.git
 
-créer une branche de developpement et push du code
+# Créer une branche de developpement et push du code
+
 git checkout -b nomdetabranche
 
 git add .
