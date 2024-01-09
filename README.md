@@ -3,7 +3,7 @@
 Initialiser le projet sur sa machine
 git init
 
-git config --global user.name 'Theo'
+git config --global user.name 'Prenom'
 
 git config --global user.email 'tonadresse@gmail.com'
 
