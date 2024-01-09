@@ -7,7 +7,7 @@ git config --global user.name 'Theo'
 
 git config --global user.email 'tonadresse@gmail.com
 
-git remote add origin https://github.com/TheoDidon/python_image.git
+git remote add origin https://github.com/TheoDidon/bibliotheque.git
 
 créer une branche de developpement et push du code
 git checkout -b nomdetabranche
