@@ -28,8 +28,8 @@ public:
     void            setAdresse(string adresse)                                                                                          ;
     void            setId(int id_adherent)                                                                                              ;
     void            setNbEmpruntMax(int nb_emprunt_max)                                                                                 ;
-    void            setBibliotheque(Bibliotheque bibliotheque);
-
+    void            setBibliotheque(Bibliotheque bibliotheque)                                                                          ;
+    void            affiche()                                                                                                           ;
 };
 
 #endif /* ADHERENT_H */
