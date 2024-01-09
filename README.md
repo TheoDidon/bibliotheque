@@ -5,7 +5,7 @@ git init
 
 git config --global user.name 'Theo'
 
-git config --global user.email 'tonadresse@gmail.com
+git config --global user.email 'tonadresse@gmail.com'
 
 git remote add origin https://github.com/TheoDidon/bibliotheque.git
 
