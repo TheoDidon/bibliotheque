@@ -14,15 +14,16 @@ class BandeDessinee : public Livre {
     string dessinateur;
 
     public :
-
     BandeDessinee ();
+
     BandeDessinee (string auteur, string titre, string editeur, string isbn, string public_vise, string etats, string dessinateur);
 
     string getDessinateur ();
 
-    void setDessinateur ();
+    void setDessinateur (string dessinateur);
 
     void affiche ();
+
 
 };
 
