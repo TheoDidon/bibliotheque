@@ -16,16 +16,17 @@ private:
     vector<Livre*> livres   ;
 
 public:
+                    Bibliotheque    ()                          ;
                     Bibliotheque    (string nom, string adresse);
     string          getNom          ()                          ;
     string          getAdresse      ()                          ;
     vector<Livre*>  getLivres       ()                          ;
     void            setNom          (string nom)                ;
     void            setAdresse      (string adresse)            ;
-    void            addLivre        (Livre *livre)              ;
-    void            removeLivre     (Livre *livre)              ;
-    void            affiche         ()                          ;
-    void            afficheLivres   ()                          ;
+    void            addLivre        (Livre *livre)              ;/* pas fait */
+    void            removeLivre     (Livre *livre)              ;/* pas fait */
+    void            affiche         ()                          ;/* pas fait */
+    void            afficheLivres   ()                          ;/* pas fait */
 };
 
 #endif /* BIBLIOTHEQUE_H */

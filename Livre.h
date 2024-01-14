@@ -18,7 +18,7 @@ protected:
 
 public:
             Livre       ()                                                                                          ;
-            Livre       (string auteur, string titre, string editeur, string isbn, string public_vise, string etats);
+            Livre       (int code, string auteur, string titre, string editeur, string isbn, string public_vise, string etats);
     void    affiche     ()                                                                                          ;
 
     string  getAuteur   ()                                                                                          ;
@@ -36,4 +36,4 @@ public:
     void    setEtats    (string etats)                                                                              ;
 };
 
-#endif /* LIVRE_H */
+#endif /* LIVRE_H */s
