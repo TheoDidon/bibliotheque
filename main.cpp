@@ -22,9 +22,3 @@ int main () {
 
     return 0;
 }
-/*
-/usr/bin/clang++ -std=gnu++14
-    -g /Users/baptistechachura/projects/prog_objet/biblio/bibliotheque/main.cpp 
-        -o /Users/baptistechachura/projects/prog_objet/biblio/bibliotheque/main
-
-*/
