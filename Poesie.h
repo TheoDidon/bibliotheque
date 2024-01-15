@@ -15,7 +15,7 @@ private:
 public:
             Poesie  (string auteur, string titre, string editeur, string isbn, string public_vise, string etats, string style)  ;
     string  getStyle()                                                                                                          ;
-    void    setStyle()                                                                                                          ;
+    void    setStyle(string style)                                                                                                          ;
     void    affiche ()                                                                                                          ;
 };
 
