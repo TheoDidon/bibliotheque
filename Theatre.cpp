@@ -22,7 +22,7 @@ void    Theatre::setSiecle(string siecle) {
     this->siecle =siecle;
 }                                                                                           
 void    Theatre::affiche () {
-        cout<< "auteur : "<< auteur <<endl;
+    cout<< "auteur : "<< auteur <<endl;
     cout<< "titre : "<< titre <<endl;
     cout<< "editeur : "<< editeur <<endl;
     cout<< "isbn : "<< isbn <<endl;

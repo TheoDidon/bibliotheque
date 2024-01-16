@@ -30,6 +30,8 @@ public:
     void            setNbEmpruntMax(int nb_emprunt_max)                                                                                 ;
     void            setBibliotheque(Bibliotheque bibliotheque)                                                                          ;
     void            affiche()                                                                                                           ;
+    void            emprunte(int code); /* pas fait */
+
 };
 
 #endif /* ADHERENT_H */
