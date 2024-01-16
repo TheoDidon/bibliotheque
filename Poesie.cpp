@@ -20,11 +20,11 @@ void    Poesie::setStyle(string style){
     this->style = style;
 }                                                                                                     
 void    Poesie::affiche (){
-    this->auteur = auteur;
-    this->titre = titre;
-    this->editeur = editeur;
-    this->isbn = isbn;
-    this->public_vise = public_vise;
-    this->etats = etats;
-    this->style = style;
+    cout<< "auteur : "<< auteur <<endl;
+    cout<< "titre : "<< titre <<endl;
+    cout<< "editeur : "<< editeur <<endl;
+    cout<< "isbn : "<< isbn <<endl;
+    cout<< "public viisé : "<< public_vise <<endl;
+    cout<< "etats : "<< etats <<endl;
+    cout<<"style : "<< style<< endl;
 }
