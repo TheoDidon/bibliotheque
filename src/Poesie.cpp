@@ -4,9 +4,10 @@
 
 using namespace std;
 
-Poesie::Poesie  (string auteur, string titre, string editeur, string isbn, string public_vise, string etats, string style){
+Poesie::Poesie  (int code; string auteur, string titre, string editeur, string isbn, string public_vise, string etats, string style){
+    this->code = code;
     this->auteur = auteur;
-    this->titre = titre;
+    this->titre = titre; 
     this->editeur = editeur;
     this->isbn = isbn;
     this->public_vise = public_vise;

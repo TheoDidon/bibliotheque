@@ -5,7 +5,8 @@
 
 using namespace std;
 
-Album::Album  (string auteur, string titre, string editeur, string isbn, string public_vise, string etats, string illustration){
+Album::Album  (int code; string auteur, string titre, string editeur, string isbn, string public_vise, string etats, string illustration){
+    this->code = code;
     this->auteur = auteur;
     this->titre = titre;
     this->editeur = editeur;

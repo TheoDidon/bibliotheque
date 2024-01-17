@@ -23,7 +23,7 @@ int main () {
 
 
 
-    /* piqué sur l'autre projet */
+    /* piqué sur l'autre projet 
 
     void menu(){
     bool continuer = true;
@@ -55,7 +55,18 @@ int main () {
     }while(continuer);
     }
 void creeradherent(){
-    
+    cout<<"création d'un adhérent"<< endl;
+    cout<<"entrez le nom"<< endl;
+    cin >> nom ;
+    cout<<"entrez le prenom"<<endl;
+    cin >> prenom;
+    cout<<"entrez l'adresse"<<endl;
+    cin >> adresse;
+    cout<<"entrez le nombre d'emprunt maximal"<<endl;
+    cin >> nb_emprunt_max;
+    cout>>"entrez le nom de la bibliothèque"<<endl;
+    cin >> nom_biblio;
+*/
 
 }
     return 0;
