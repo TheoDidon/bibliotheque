@@ -30,3 +30,11 @@ void Bibliotheque::setNom(string nom){
 void Bibliotheque::setAdresse(string adresse){
     this->adresse = adresse;
 }
+
+void Bibliotheque::addLivre(Livre l){
+    inventaire.ajoute(l);
+}
+
+void Bibliotheque::removeLivre(Livre livre){
+    inventaire.enleve(livre);
+}

@@ -16,7 +16,7 @@ public:
     Noeud*  getHead     ()                              ;
     void    setHead     (Noeud* newHead)                ;
     void    ajoute      (Livre l)                       ;
-    void    enleve      ()                              ;
+    void    enleve      (Livre livre_a_supprimer)      ;
     void    affiche     ()                              ;
 };
 
