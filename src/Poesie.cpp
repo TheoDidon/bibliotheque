@@ -20,11 +20,6 @@ void    Poesie::setStyle(string style){
     this->style = style;
 }                                                                                                     
 void    Poesie::affiche (){
-    cout<< "auteur : "<< auteur <<endl;
-    cout<< "titre : "<< titre <<endl;
-    cout<< "editeur : "<< editeur <<endl;
-    cout<< "isbn : "<< isbn <<endl;
-    cout<< "public viisé : "<< public_vise <<endl;
-    cout<< "etats : "<< etats <<endl;
+    Livre::affiche();
     cout<<"style : "<< style<< endl;
 }

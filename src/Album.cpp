@@ -14,18 +14,13 @@ Album::Album  (string auteur, string titre, string editeur, string isbn, string 
     this->etats = etats;
     this->illustration = illustration;
 } 
-string  Album::getIllustration(){
+string Album::getIllustration(){
     return this->illustration;
 }                                                     
 void    Album::setIllustration(){
     this->illustration = illustration;
 }                                          
-void    Album::affiche (){
-    cout<< "auteur : "<< auteur <<endl;
-    cout<< "titre : "<< titre <<endl;
-    cout<< "editeur : "<< editeur <<endl;
-    cout<< "isbn : "<< isbn <<endl;
-    cout<< "public viisé : "<< public_vise <<endl;
-    cout<< "etats : "<< etats <<endl;
+void Album::affiche (){
+    Livre::affiche();
     cout<<"illustration : "<< illustration<< endl;
 }

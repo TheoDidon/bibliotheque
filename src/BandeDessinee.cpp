@@ -26,11 +26,6 @@ void BandeDessinee::setDessinateur (string dessinateur){
 }
 
 void BandeDessinee::affiche (){
-    cout<< "auteur : "<< auteur <<endl;
-    cout<< "titre : "<< titre <<endl;
-    cout<< "editeur : "<< editeur <<endl;
-    cout<< "isbn : "<< isbn <<endl;
-    cout<< "public viisé : "<< public_vise <<endl;
-    cout<< "etats : "<< etats <<endl;
+    Livre::affiche(); 
     cout<<"dessinateur : "<< dessinateur <<endl;
 }

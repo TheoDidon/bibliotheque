@@ -20,11 +20,6 @@ void    Roman::setGenre(string genre){
     this->genre = genre;
 }                                                                         
 void    Roman::affiche (){
-    cout<< "auteur : "<< auteur <<endl;
-    cout<< "titre : "<< titre <<endl;
-    cout<< "editeur : "<< editeur <<endl;
-    cout<< "isbn : "<< isbn <<endl;
-    cout<< "public viisé : "<< public_vise <<endl;
-    cout<< "etats : "<< etats <<endl;
+    Livre::affiche();
     cout<<"genre : "<< genre<< endl;
 }

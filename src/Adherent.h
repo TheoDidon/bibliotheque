@@ -32,7 +32,7 @@ public:
     void            setId(int id_adherent)                                                                                              ;
     void            setNbEmpruntMax(int nb_emprunt_max)                                                                                 ;
     void            setBibliotheque(Bibliotheque bibliotheque)                                                                          ;
-    void            affiche()                                                                                                           ;
+    friend ostream& operator<<(ostream& out, const Adherent& a);
     void            emprunte(int code); /* pas fait */
     bool            peutempruter();
 
