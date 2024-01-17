@@ -37,4 +37,4 @@ public:
     void    setEtats    (string etats)                                                                              ;
 };
 
-#endif /* LIVRE_H */s
+#endif /* LIVRE_H */
