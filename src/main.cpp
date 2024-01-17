@@ -20,6 +20,7 @@ int main () {
     ad.setNom("tt");
     nom = ad.getNom();
     cout<< "nom modifié"<< nom << endl;
+    cout << ad;
 
 
 

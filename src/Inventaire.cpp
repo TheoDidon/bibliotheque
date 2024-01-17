@@ -48,25 +48,30 @@ void Inventaire::ajoute(Livre l) {
     }
 }
 
-void Inventaire::enleve() {
-
-    if ( head == nullptr ) {
+void Inventaire::enleve(Livre livre_a_supprimer) {
+    if ( (livre_a_supprimer.getIsbn() == "") || (head == nullptr) ) {
         return;
     }
 
-    if ( head->getSuivant()== nullptr ) {
-        delete head;
-        head = nullptr;
-        return;
-    }
+    if ( livre_a_supprimer.getIsbn() == head->getLivre().getIsbn() ) {
+        Noeud* temporaire = head;
+        head = head->getSuivant();
+        delete temporaire;
+    } 
+    else {
+        Noeud* precedent = head;
+        while ( (precedent != nullptr) && (precedent->getSuivant()->getLivre().getIsbn() != livre_a_supprimer.getIsbn()) ){
+            precedent = precedent->getSuivant();
+        }
 
-    Noeud* current = head;
-
-    while ( current->getSuivant()->getSuivant() != nullptr ) {
-        current = current->getSuivant();
+        if (precedent == nullptr) {
+            return;
+        }
+        Noeud* temporaire = precedent->getSuivant();
+        precedent->setSuivant(temporaire->getSuivant());
+        delete temporaire;
     }
-    delete current->getSuivant();
-    current->setSuivant(nullptr);
+    // delete livre_a_supprimer; Cette ligne la je ne suis pas sur et elle me fait peur
 }
 
 void Inventaire::affiche() {
