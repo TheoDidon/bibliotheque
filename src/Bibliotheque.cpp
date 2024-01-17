@@ -16,8 +16,8 @@ string Bibliotheque::getAdresse(){
     return this->adresse;
 }
 
-vector<Livre*> Bibliotheque::getLivres(){
-    return this->livres;
+Inventaire Bibliotheque::getLivres(){
+    return this->inventaire;
 }
 void Bibliotheque::setNom(string nom){
     this->nom = nom;

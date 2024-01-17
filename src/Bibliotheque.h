@@ -5,6 +5,7 @@
 #include <vector>
 
 #include "Livre.h"
+#include "Inventaire.h"
 
 using namespace std;
 
@@ -14,14 +15,14 @@ class Bibliotheque
 private:
     string nom;
     string adresse;
-    vector<Livre *> livres;/* peut être essayer de faire une liuste chainée*/
+    Inventaire inventaire;
 
 public:
     Bibliotheque();
     Bibliotheque(string nom, string adresse);
     string getNom();
     string getAdresse();
-    vector<Livre *> getLivres();
+    Inventaire getLivres();
     void setNom(string nom);
     void setAdresse(string adresse);
     void addLivre(Livre *livre);                      /* pas fait */
