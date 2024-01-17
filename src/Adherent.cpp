@@ -72,8 +72,8 @@ ostream& operator<<(ostream& out, const Adherent& a) {
     out<<a.nb_emprunt_max<< endl;
 }
 
-bool Adherent::peutempruter(){
-    if (this->nb_emprunt_en_cours< nb_emprunt_max){
+bool Adherent::peutEmpruter(){
+    if (this->nb_emprunt_en_cours < nb_emprunt_max){
         return true;
     }
     else{
