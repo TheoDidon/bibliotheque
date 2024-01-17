@@ -5,13 +5,16 @@
 
 Bibliotheque::Bibliotheque(){
 }
+
 Bibliotheque::Bibliotheque(string nom,string  adresse){
     nom = this->nom;
     adresse = this->adresse;
 }
+
 string Bibliotheque::getNom(){
     return this->nom;
 }
+
 string Bibliotheque::getAdresse(){
     return this->adresse;
 }
@@ -19,6 +22,7 @@ string Bibliotheque::getAdresse(){
 Inventaire Bibliotheque::getLivres(){
     return this->inventaire;
 }
+
 void Bibliotheque::setNom(string nom){
     this->nom = nom;
 }
