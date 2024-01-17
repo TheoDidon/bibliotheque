@@ -13,7 +13,7 @@ private:
     string genre;
 
 public: 
-            Roman   (string auteur, string titre, string editeur, string isbn, string public_vise, string etats, string genre)  ;
+            Roman   (int code, string auteur, string titre, string editeur, string isbn, string public_vise, string etats, string genre)  ;
     string  getGenre()                                                                                                          ;
     void    setGenre(string genre)                                                                                              ;
     void    affiche ()                                                                                                          ;

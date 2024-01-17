@@ -16,7 +16,7 @@ class BandeDessinee : public Livre {
     public :
     BandeDessinee ();
 
-    BandeDessinee (string auteur, string titre, string editeur, string isbn, string public_vise, string etats, string dessinateur);
+    BandeDessinee (int code, string auteur, string titre, string editeur, string isbn, string public_vise, string etats, string dessinateur);
 
     string getDessinateur ();
 

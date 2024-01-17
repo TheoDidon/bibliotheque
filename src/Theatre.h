@@ -13,7 +13,7 @@ private:
     string siecle;
 
 public: 
-            Theatre   (string auteur, string titre, string editeur, string isbn, string public_vise, string etats, string siecle)  ;
+            Theatre   (int code,string auteur, string titre, string editeur, string isbn, string public_vise, string etats, string siecle)  ;
     string  getSiecle()                                                                                                          ;
     void    setSiecle(string siecle)                                                                                              ;
     void    affiche ()                                                                                                          ;
