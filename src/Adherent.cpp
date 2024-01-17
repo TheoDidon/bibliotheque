@@ -58,18 +58,20 @@ void Adherent::setNbEmpruntMax(int nb_emprunt_max){
 void Adherent::setBibliotheque(Bibliotheque biblio){
     this->bibliotheque = biblio;
 }
-void Adherent::affiche(){
-    cout<<"nom : ";
-    cout<<this->nom<< endl;
-    cout<<"prenom : ";
-    cout<<this->prenom<< endl;
-    cout<<"adresse : ";
-    cout<<this->adresse<< endl;
-    cout<<"id adhérent : ";
-    cout<<this->id_adherent<< endl;
-    cout<<"nombre d'emprunt max : ";
-    cout<<this->nb_emprunt_max<< endl;
+
+ostream& operator<<(ostream& out, const Adherent& a) {
+    out<<"nom : ";
+    out<<a.nom<< endl;
+    out<<"prenom : ";
+    out<<a.prenom<< endl;
+    out<<"adresse : ";
+    out<<a.adresse<< endl;
+    out<<"id adhérent : ";
+    out<<a.id_adherent<< endl;
+    out<<"nombre d'emprunt max : ";
+    out<<a.nb_emprunt_max<< endl;
 }
+
 bool Adherent::peutempruter(){
     if (this->nb_emprunt_en_cours< nb_emprunt_max){
         return true;
