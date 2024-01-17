@@ -4,14 +4,7 @@
 
 using namespace std;
 
-Poesie::Poesie  (int code; string auteur, string titre, string editeur, string isbn, string public_vise, string etats, string style){
-    this->code = code;
-    this->auteur = auteur;
-    this->titre = titre; 
-    this->editeur = editeur;
-    this->isbn = isbn;
-    this->public_vise = public_vise;
-    this->etats = etats;
+Poesie::Poesie(int code, string auteur, string titre, string editeur, string isbn, string public_vise, string etats, string style) : Livre(code, auteur, titre, editeur, isbn, public_vise, etats){
     this->style = style;
 }
 string  Poesie::getStyle(){

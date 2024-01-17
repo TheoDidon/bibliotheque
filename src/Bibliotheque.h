@@ -16,16 +16,6 @@ private:
     string adresse;
     vector<Livre *> livres;/* peut être essayer de faire une liuste chainée*/
 
-/* liste chainée */
-    struct Noeud {
-        Livre *livre;
-        Noeud *suivant;
-
-        Noeud(Livre *livre) : livre(livre), suivant(nullptr){}
-
-    };
-    Noeud *livres;
-/* choisir entre la liste chainée ou vector avant de faire les methodes en dessous*/
 public:
     Bibliotheque();
     Bibliotheque(string nom, string adresse);

@@ -4,16 +4,7 @@
 #include<string>
 
 
-BandeDessinee::BandeDessinee (){
-
-}
-BandeDessinee::  BandeDessinee (string auteur, string titre, string editeur, string isbn, string public_vise, string etats, string dessinateur){
-    this->auteur = auteur;
-    this->titre = titre;
-    this->editeur = editeur;
-    this->isbn = isbn;
-    this->public_vise = public_vise;
-    this->etats = etats;
+BandeDessinee::BandeDessinee(int code, string auteur, string titre, string editeur, string isbn, string public_vise, string etats, string dessinateur) : Livre(code, auteur, titre, editeur, isbn, public_vise, etats){
     this->dessinateur = dessinateur;
 }
 

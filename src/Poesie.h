@@ -13,7 +13,7 @@ private:
     string style;
 
 public:
-            Poesie  (int code; string auteur, string titre, string editeur, string isbn, string public_vise, string etats, string style)  ;
+            Poesie  (int code, string auteur, string titre, string editeur, string isbn, string public_vise, string etats, string style)  ;
     string  getStyle()                                                                                                          ;
     void    setStyle(string style)                                                                                                          ;
     void    affiche ()                                                                                                          ;

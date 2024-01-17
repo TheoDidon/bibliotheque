@@ -5,14 +5,7 @@
 using namespace std ;
 
 
-Theatre::Theatre   (int code, string auteur, string titre, string editeur, string isbn, string public_vise, string etats, string siecle){
-    this->code = code;
-    this->auteur = auteur;
-    this->titre = titre;
-    this->editeur = editeur;
-    this->isbn = isbn ;
-    this->public_vise = public_vise ;
-    this->etats = etats;
+Theatre::Theatre   (int code, string auteur, string titre, string editeur, string isbn, string public_vise, string etats, string siecle) : Livre(code, auteur, titre, editeur, isbn, public_vise, etats){
     this->siecle = siecle ;
 
 }

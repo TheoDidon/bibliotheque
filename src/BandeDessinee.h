@@ -9,13 +9,11 @@ using namespace std;
 
 class BandeDessinee : public Livre {
 
-    private :
+private :
 
     string dessinateur;
 
-    public :
-    BandeDessinee ();
-
+public :
     BandeDessinee (int code, string auteur, string titre, string editeur, string isbn, string public_vise, string etats, string dessinateur);
 
     string getDessinateur ();

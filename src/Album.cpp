@@ -5,14 +5,7 @@
 
 using namespace std;
 
-Album::Album  (int code; string auteur, string titre, string editeur, string isbn, string public_vise, string etats, string illustration){
-    this->code = code;
-    this->auteur = auteur;
-    this->titre = titre;
-    this->editeur = editeur;
-    this->isbn = isbn;
-    this-> public_vise = public_vise;
-    this->etats = etats;
+Album::Album(int code, string auteur, string titre, string editeur, string isbn, string public_vise, string etats, string illustration) : Livre(code, auteur, titre, editeur, isbn, public_vise, etats){
     this->illustration = illustration;
 } 
 string Album::getIllustration(){
