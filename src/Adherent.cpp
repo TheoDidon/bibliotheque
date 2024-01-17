@@ -9,6 +9,7 @@ Adherent::Adherent(string nom, string prenom, string adresse,int id_adherent, in
     this->id_adherent = id_adherent;
     this->nb_emprunt_max = nb_emprunt_max;
     this->bibliotheque = bibliotheque;
+    nb_emprunt_en_cours = 0;
 }
 string Adherent::getNom(){
     return this->nom;
@@ -68,4 +69,13 @@ void Adherent::affiche(){
     cout<<this->id_adherent<< endl;
     cout<<"nombre d'emprunt max : ";
     cout<<this->nb_emprunt_max<< endl;
+}
+bool Adherent::peutempruter(){
+    if (this->nb_emprunt_en_cours< nb_emprunt_max){
+        return true;
+    }
+    else{
+        cout<<"l'adhérent a emprunté trop de livre";
+        return false;
+    }
 }

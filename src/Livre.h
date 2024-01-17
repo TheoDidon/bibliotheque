@@ -15,6 +15,7 @@ protected:
     string  isbn        ;
     string  public_vise ;
     string  etats       ;
+    /* au vu des autres fonctions demandées il faut peut être faire un argument avec sa biliotheque d'origine*/
 
 public:
             Livre       ()                                                                                          ;

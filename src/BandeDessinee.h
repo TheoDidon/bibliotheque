@@ -23,6 +23,8 @@ class BandeDessinee : public Livre {
     void setDessinateur (string dessinateur);
 
     void affiche ();
+    
+
 
 
 };

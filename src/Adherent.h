@@ -14,6 +14,9 @@ private:
     int             id_adherent     ;
     int             nb_emprunt_max  ;
     Bibliotheque    bibliotheque    ;
+    int             nb_emprunt_en_cours;
+
+    /* pour id_adhérent faudrait peut être faire une varialble de classe qui s'incremente à chaque cr&éation */
 
 public:
                     Adherent(string nom, string prenom, string adresse,int id_adherent, int nb_emprunt_max, Bibliotheque bibliotheque)  ;
@@ -31,6 +34,7 @@ public:
     void            setBibliotheque(Bibliotheque bibliotheque)                                                                          ;
     void            affiche()                                                                                                           ;
     void            emprunte(int code); /* pas fait */
+    bool            peutempruter();
 
 };
 
