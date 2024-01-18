@@ -21,14 +21,14 @@ public:
             Livre       ()                                                                                          ;
             Livre       (int code, string auteur, string titre, string editeur, string isbn, string public_vise, string etats);
     void    affiche     ()                                                                                          ;
-
+    int     getCode     ()                                                                                          ;
     string  getAuteur   ()                                                                                          ;
     string  getTitre    ()                                                                                          ;
     string  getEditeur  ()                                                                                          ;
     string  getIsbn     ()                                                                                          ;
     string  getPublic   ()                                                                                          ;
     string  getEtats    ()                                                                                          ;
-
+    void    setCode     (int code)                                                                                  ;
     void    setAuteur   (string auteur)                                                                             ;
     void    setTitre    (string titre)                                                                              ; 
     void    setEditeur  (string editeur)                                                                            ;

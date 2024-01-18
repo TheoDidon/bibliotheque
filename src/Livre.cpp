@@ -29,6 +29,10 @@ void Livre::affiche(){
     cout<< "etats : "<< etats <<endl;
 }
 
+int Livre::getCode(){
+    return code;
+}
+
 string Livre::getAuteur(){
     return this->auteur;
 }
@@ -48,6 +52,10 @@ string Livre::getIsbn(){
  }
 string Livre::getEtats(){
     return this->etats;
+}
+
+void Livre::setCode(int c){
+    code = c;
 }
 
 void    Livre::setAuteur   (string auteur){

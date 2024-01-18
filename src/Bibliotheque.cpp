@@ -31,8 +31,8 @@ void Bibliotheque::setAdresse(string adresse){
     this->adresse = adresse;
 }
 
-void Bibliotheque::addLivre(Livre l){
-    inventaire.ajoute(l);
+void Bibliotheque::addLivre(Livre livre){
+    inventaire.ajoute(livre);
 }
 
 void Bibliotheque::removeLivre(Livre livre){
