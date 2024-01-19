@@ -14,7 +14,7 @@ private :
     string dessinateur;
 
 public :
-    BandeDessinee (int code, string auteur, string titre, string editeur, string isbn, string public_vise, string etats, string dessinateur);
+    BandeDessinee (int code, string auteur, string titre, string editeur, string isbn, string public_vise, string etats, string categorie, string dessinateur);
 
     string getDessinateur ();
 

@@ -13,7 +13,7 @@ private:
     string illustration;
 
 public:
-            Album  (int code, string auteur, string titre, string editeur, string isbn, string public_vise, string etats, string illustration)    ;
+            Album  (int code, string auteur, string titre, string editeur, string isbn, string public_vise, string etats, string categorie, string illustration)    ;
     string  getIllustration()                                                                                                                  ;
     void    setIllustration()                                                                                                                  ;
     void    affiche ()                                                                                                                  ;

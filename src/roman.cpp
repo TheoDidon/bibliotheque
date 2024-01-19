@@ -4,7 +4,7 @@
 
 using namespace std;
 
-Roman::Roman   (int code, string auteur, string titre, string editeur, string isbn, string public_vise, string etats, string genre) : Livre(code, auteur, titre, editeur, isbn, public_vise, etats){
+Roman::Roman(int code, string auteur, string titre, string editeur, string isbn, string public_vise, string etats, string categorie, string genre) : Livre(code, auteur, titre, editeur, isbn, public_vise, etats, categorie){
     this->genre = genre ;
 }
 string  Roman::getGenre(){

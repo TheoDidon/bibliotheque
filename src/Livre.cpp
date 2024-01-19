@@ -8,7 +8,7 @@ using namespace std;
 Livre::Livre(){
 }
 
-Livre::Livre(int code, string auteur, string titre, string editeur, string isbn, string public_vise, string etats){
+Livre::Livre(int code, string auteur, string titre, string editeur, string isbn, string public_vise, string etats, string categorie){
     this->code = code;
     this->auteur = auteur;
     this->titre = titre;
@@ -16,6 +16,7 @@ Livre::Livre(int code, string auteur, string titre, string editeur, string isbn,
     this->isbn = isbn;
     this->public_vise = public_vise;
     this->etats = etats;
+    this->categorie = categorie;
 
 }
 

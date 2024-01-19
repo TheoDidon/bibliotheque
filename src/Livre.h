@@ -20,7 +20,7 @@ protected:
 
 public:
             Livre       ()                                                                                          ;
-            Livre       (int code, string auteur, string titre, string editeur, string isbn, string public_vise, string etats);
+            Livre       (int code, string auteur, string titre, string editeur, string isbn, string public_vise, string etats, string categorie);
     void    affiche     ()                                                                                          ;
     int     getCode     ()                                                                                          ;
     string  getAuteur   ()                                                                                          ;

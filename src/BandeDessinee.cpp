@@ -4,7 +4,7 @@
 #include<string>
 
 
-BandeDessinee::BandeDessinee(int code, string auteur, string titre, string editeur, string isbn, string public_vise, string etats, string dessinateur) : Livre(code, auteur, titre, editeur, isbn, public_vise, etats){
+BandeDessinee::BandeDessinee(int code, string auteur, string titre, string editeur, string isbn, string public_vise, string etats, string categorie, string dessinateur) : Livre(code, auteur, titre, editeur, isbn, public_vise, etats, categorie){
     this->dessinateur = dessinateur;
 }
 
