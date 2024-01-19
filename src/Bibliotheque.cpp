@@ -94,3 +94,20 @@ void Bibliotheque::afficheLivresParCategorie(string categorie){
         cerr << "Erreur : " << e.what() << '\n';
     }
 }
+
+bool Bibliotheque::estlibre(Livre livre){
+    return livre.getEtats()=="libre";
+}
+
+void Bibliotheque::rendreLivre(Livre livre){
+
+    Noeud* current = inventaire.getHead();
+
+    while( current != nullptr){
+        Livre current_book = current->getLivre();
+
+        if ( current_book.getCode()==livre.getCode() ){
+            livre.setEtats("libre");
+        }
+    }
+}

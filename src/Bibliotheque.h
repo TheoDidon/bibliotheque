@@ -32,9 +32,9 @@ public:
     void afficheTousLesLivres();                      
     void afficheLivresParCategorie(string categorie); 
     void demandeLivre(string isbn, Bibliotheque nom); /* pas fait */
-    bool estlibre(Livre livre);/* pas fait */
-    void rendrelivres();
-    friend ostream& operator<<(ostream& out, const Bibliotheque& b)                                                                         ;
+    bool estlibre(Livre livre);
+    void rendreLivre(Livre livre);
+    friend ostream& operator<<(ostream& out, const Bibliotheque& b);
 };
 
 #endif /* BIBLIOTHEQUE_H */
