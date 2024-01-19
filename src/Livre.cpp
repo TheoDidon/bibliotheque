@@ -1,6 +1,8 @@
 #include"Livre.h"
 #include<iostream>
 #include<string>
+#include <vector>
+#include <algorithm>
 
 using namespace std;
 
@@ -84,12 +86,12 @@ void Livre::setCategorie(string categorie){
     this->categorie = categorie;
 }
 
-bool Livre::etasExiste(string etasPropose){
+bool Livre::etatExiste(string etatPropose){
     
-    vector<string>etasExistants;
-    etasExistants.push_back("libre");
-    etasExistants.push_back("emprinte");
-    etasExistants.push_back("prete");
+    vector<string>etatsExistants;
+    etatsExistants.push_back("libre");
+    etatsExistants.push_back("emprunte");
+    etatsExistants.push_back("prete");
 
-    return (find (etasExistants.begin(),etasExistants.end(), etasPropose) != etasExistants.end());
+    return find(etatsExistants.begin(),etatsExistants.end(), etatPropose) != etatsExistants.end();
 }

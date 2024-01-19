@@ -16,7 +16,7 @@ protected:
     string  public_vise ;
     string  etats       ;
     string  categorie   ;
-    bool    etasExiste (string etasPropose) ;
+    bool    etatExiste (string etatPropose) ;
     /* au vu des autres fonctions demandées il faut peut être faire un argument avec sa biliotheque d'origine*/
 
 public:
@@ -39,7 +39,6 @@ public:
     void    setPublic   (string public_vise)                                                                        ;
     void    setEtats    (string etats)                                                                              ;
     void    setCategorie(string categorie)                                                                          ;  
-    void    changeEtas  (string nouvelEtas)                                                                         ;
 };
 
 #endif /* LIVRE_H */

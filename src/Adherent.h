@@ -20,6 +20,7 @@ private:
 
 public:
                     Adherent(string nom, string prenom, string adresse, int nb_emprunt_max, Bibliotheque bibliotheque)  ;
+                    ~Adherent();
     string          getNom()                                                                                                            ;
     string          getprenom()                                                                                                         ;
     string          getAdresse()                                                                                                        ;

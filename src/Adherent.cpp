@@ -14,6 +14,11 @@ Adherent::Adherent(string nom, string prenom, string adresse, int nb_emprunt_max
     nb_emprunt_en_cours = 0;
     nb_adherent++;
 }
+
+Adherent::~Adherent(){
+    nb_adherent--;
+}
+
 string Adherent::getNom(){
     return this->nom;
 }
