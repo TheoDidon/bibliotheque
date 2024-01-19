@@ -83,3 +83,13 @@ void Livre::setEtats(string etats){
 void Livre::setCategorie(string categorie){
     this->categorie = categorie;
 }
+
+bool Livre::etasExiste(string etasPropose){
+    
+    vector<string>etasExistants;
+    etasExistants.push_back("libre");
+    etasExistants.push_back("emprinte");
+    etasExistants.push_back("prete");
+
+    return (find (etasExistants.begin(),etasExistants.end(), etasPropose) != etasExistants.end());
+}
