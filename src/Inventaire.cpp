@@ -43,7 +43,7 @@ void Inventaire::ajoute(Livre l) {
         while ( current->getSuivant() != nullptr ) {
             current = current->getSuivant();
         }
-        nouveauNoeud->setSuivant(current->getSuivant());
+        // nouveauNoeud->setSuivant(current->getSuivant());
         current->setSuivant(nouveauNoeud);
     }
 }
