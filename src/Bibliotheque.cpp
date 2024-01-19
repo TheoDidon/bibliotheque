@@ -111,3 +111,8 @@ void Bibliotheque::rendreLivre(Livre livre){
         }
     }
 }
+
+void Bibliotheque::affiche(){
+    cout<<"nom : "<< nom << "adresse : " << adresse << endl;
+    inventaire.affiche();
+}
