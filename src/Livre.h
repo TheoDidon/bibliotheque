@@ -15,6 +15,7 @@ protected:
     string  isbn        ;
     string  public_vise ;
     string  etats       ;
+    string  categorie   ;
     /* au vu des autres fonctions demandées il faut peut être faire un argument avec sa biliotheque d'origine*/
 
 public:
@@ -28,6 +29,7 @@ public:
     string  getIsbn     ()                                                                                          ;
     string  getPublic   ()                                                                                          ;
     string  getEtats    ()                                                                                          ;
+    string  getCategorie()                                                                                          ;
     void    setCode     (int code)                                                                                  ;
     void    setAuteur   (string auteur)                                                                             ;
     void    setTitre    (string titre)                                                                              ; 
@@ -35,6 +37,7 @@ public:
     void    setIsbn     (string isbn)                                                                               ;
     void    setPublic   (string public_vise)                                                                        ;
     void    setEtats    (string etats)                                                                              ;
+    void    setCategorie(string categorie)                                                                          ;
 };
 
 #endif /* LIVRE_H */

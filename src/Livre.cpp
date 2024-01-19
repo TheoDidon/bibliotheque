@@ -53,26 +53,32 @@ string Livre::getIsbn(){
 string Livre::getEtats(){
     return this->etats;
 }
+string Livre::getCategorie(){
+    return categorie;
+}
 
 void Livre::setCode(int c){
     code = c;
 }
 
-void    Livre::setAuteur   (string auteur){
+void Livre::setAuteur(string auteur){
     this->auteur = auteur;
 }                                                                            
-void    Livre::setTitre    (string titre){
+void Livre::setTitre(string titre){
     this->titre = titre;
 }                                                                            
-void    Livre::setEditeur  (string editeur){
+void Livre::setEditeur(string editeur){
     this->editeur = editeur;
 }    
-void    Livre::setIsbn     (string isbn){
+void Livre::setIsbn(string isbn){
     this->isbn = isbn;
 }                                  
-void    Livre::setPublic   (string public_vise){
+void Livre::setPublic(string public_vise){
     this->public_vise = public_vise;
 } 
-void    Livre::setEtats    (string etats){
+void Livre::setEtats(string etats){
     this->etats = etats;
 }         
+void Livre::setCategorie(string categorie){
+    this->categorie = categorie;
+}

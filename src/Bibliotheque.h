@@ -16,6 +16,7 @@ private:
     string nom;
     string adresse;
     Inventaire inventaire;
+    bool categorieExiste(string categorie);
 
 public:
     Bibliotheque();
@@ -25,14 +26,15 @@ public:
     Inventaire getLivres();
     void setNom(string nom);
     void setAdresse(string adresse);
-    void addLivre(Livre livre);                      /* pas fait */
-    void removeLivre(Livre livre);                   /* pas fait */ /* vu l'enoncé faudrait que removelivre prenne le code du livre en argument*/
-    void affiche();                                   /* pas fait */
-    void afficheTousLesLivres();                      /* pas fait */
-    void afficheLivresParCategorie(string categorie); /* pas fait */
+    void addLivre(Livre livre);                      
+    void removeLivre(Livre livre);                   
+    void affiche();                               
+    void afficheTousLesLivres();                      
+    void afficheLivresParCategorie(string categorie); 
     void demandeLivre(string isbn, Bibliotheque nom); /* pas fait */
     bool estlibre(Livre livre);/* pas fait */
     void rendrelivres();
+    friend ostream& operator<<(ostream& out, const Bibliotheque& b)                                                                         ;
 };
 
 #endif /* BIBLIOTHEQUE_H */

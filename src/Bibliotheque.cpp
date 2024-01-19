@@ -1,12 +1,24 @@
 #include"Bibliotheque.h"
 
-#include<iostream>
-#include<string>
+#include <iostream>
+#include <string>
+#include <vector>
+#include <algorithm>
 
-Bibliotheque::Bibliotheque(){
+
+bool Bibliotheque::categorieExiste(string cat){
+
+    vector<string>categoriesExistantes = {"album", "bande-dessinee", "roman", "poesie", "theatre"};
+    
+    return find(categoriesExistantes.begin(), categoriesExistantes.end(), cat) != categoriesExistantes.end();
 }
 
-Bibliotheque::Bibliotheque(string nom,string  adresse){
+Bibliotheque::Bibliotheque(){
+    nom = "Nom par defaut";
+    adresse = "La ou elle est";
+}
+
+Bibliotheque::Bibliotheque(string nom, string  adresse){
     nom = this->nom;
     adresse = this->adresse;
 }
@@ -37,4 +49,41 @@ void Bibliotheque::addLivre(Livre livre){
 
 void Bibliotheque::removeLivre(Livre livre){
     inventaire.enleve(livre);
+}
+
+void Bibliotheque::afficheTousLesLivres(){
+    inventaire.affiche();
+}
+
+ostream& operator<<(ostream& out, Bibliotheque b){
+    out << "nom : ";
+    out << b.getNom() << endl; 
+    out << "adresse : ";
+    out << b.getAdresse() << endl;
+    return out;
+}
+
+void Bibliotheque::afficheLivresParCategorie(string categorie){
+    try{
+        if( !categorieExiste(categorie) ){
+            throw runtime_error("Cette catégorie n'existe pas, essayez de mettre la catégorie en minuscule et sans accent");
+        }
+        else{
+
+            Noeud* current = inventaire.getHead();
+            
+            while( current!= nullptr ){
+            
+                Livre livre = current->getLivre();
+            
+                if( livre.getCategorie() == categorie ){
+                    livre.affiche();
+                }
+                current = current->getSuivant();
+            }
+        }
+    }
+    catch( exception& e){
+        cerr << "Erreur : " << e.what() << '\n';
+    }
 }

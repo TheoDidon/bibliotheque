@@ -70,6 +70,7 @@ ostream& operator<<(ostream& out, const Adherent& a) {
     out<<a.id_adherent<< endl;
     out<<"nombre d'emprunt max : ";
     out<<a.nb_emprunt_max<< endl;
+    return out;
 }
 
 bool Adherent::peutEmpruter(){
