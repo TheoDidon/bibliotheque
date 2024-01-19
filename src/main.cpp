@@ -22,7 +22,7 @@ int main () {
     cout<< "nom modifié"<< nom << endl;
     cout << ad;
 
-
+    // Livre livre1 = Livre()
 
     /* piqué sur l'autre projet 
 

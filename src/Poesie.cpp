@@ -4,8 +4,9 @@
 
 using namespace std;
 
-Poesie::Poesie(int code, string auteur, string titre, string editeur, string isbn, string public_vise, string etats, string categorie, string style) : Livre(code, auteur, titre, editeur, isbn, public_vise, etats, categorie){
+Poesie::Poesie(int code, string auteur, string titre, string editeur, string isbn, string public_vise, string etats, string style) : Livre(code, auteur, titre, editeur, isbn, public_vise, etats){
     this->style = style;
+    setCategorie("poesie");
 }
 string  Poesie::getStyle(){
     return this->style;
