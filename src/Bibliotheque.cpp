@@ -16,11 +16,13 @@ bool Bibliotheque::categorieExiste(string cat){
 Bibliotheque::Bibliotheque(){
     nom = "Nom par defaut";
     adresse = "La ou elle est";
+    inventaire = Inventaire();
 }
 
 Bibliotheque::Bibliotheque(string nom, string  adresse){
     nom = this->nom;
     adresse = this->adresse;
+    inventaire = Inventaire();
 }
 
 string Bibliotheque::getNom(){

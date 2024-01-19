@@ -21,12 +21,12 @@ Livre::Livre(int code, string auteur, string titre, string editeur, string isbn,
 }
 
 void Livre::affiche(){
-    cout<< "code : "<< code <<endl;
+    cout<< "\ncode : "<< code <<endl;
     cout<< "auteur : "<< auteur <<endl;
     cout<< "titre : "<< titre <<endl;
     cout<< "editeur : "<< editeur <<endl;
     cout<< "isbn : "<< isbn <<endl;
-    cout<< "public viisé : "<< public_vise <<endl;
+    cout<< "public visé : "<< public_vise <<endl;
     cout<< "etats : "<< etats <<endl;
 }
 

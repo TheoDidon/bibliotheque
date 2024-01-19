@@ -1,5 +1,6 @@
 #include"Adherent.h"
 #include"Bibliotheque.h"
+#include "Roman.h"
 #include<iostream>
 #include<string>
 
@@ -22,7 +23,24 @@ int main () {
     cout<< "nom modifié"<< nom << endl;
     cout << ad;
 
-    // Livre livre1 = Livre()
+    Livre livre1 = Livre(1, "Theo", "Theo fait du bateau", "bayard", "0a", "adulte", "libre");
+    Roman livre2 = Roman(2, "Cyril", "Cyril fait du bateau", "delcourt", "0b", "adulte", "libre", "roman policier");
+    Roman livre3 = Roman(3, "Baptiste", "Baptiste fait du bateau", "bayard", "0c", "adulte", "libre", "roman policier");
+    Roman livre4 = Roman(4, "Lucas", "Lucas fait du bateau", "delcourt", "0d", "adulte", "libre", "roman policier");
+
+    // livre1.affiche();
+    // livre2.affiche();
+    // livre3.affiche();
+    // livre4.affiche();
+
+    testbiblio.addLivre(livre1);
+    testbiblio.addLivre(livre2);
+    testbiblio.addLivre(livre3);
+    testbiblio.addLivre(livre4);
+
+    testbiblio.afficheTousLesLivres();
+
+
 
     /* piqué sur l'autre projet 
 
