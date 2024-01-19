@@ -117,6 +117,12 @@ void Bibliotheque::affiche(){
     inventaire.affiche();
 }
 
-void Bibliotheque::preteLivre(string isbn, Bibliotheque nom){
-    
+void Bibliotheque::preteLivre(Livre livre, Bibliotheque nom){
+    if (estlibre(livre)){
+        nom.addLivre(livre);
+        livre.setEtats ("prete");
+    }
+    else{
+        throw runtime_error("le livre n'est pas libre");
+    }
 }

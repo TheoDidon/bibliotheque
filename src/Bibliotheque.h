@@ -32,7 +32,7 @@ public:
     void afficheTousLesLivres();                      
     void afficheLivresParCategorie(string categorie); 
     void demandeLivre(string isbn, Bibliotheque nom); /* pas fait */
-    void preteLivre (string isbn, Bibliotheque nom);
+    void preteLivre (Livre livre, Bibliotheque nom);
     bool estlibre(Livre livre);
     void rendreLivre(Livre livre);
     friend ostream& operator<<(ostream& out, const Bibliotheque& b);
