@@ -140,3 +140,38 @@ bool Bibliotheque::LivreDansLaBiblioteque(string isbn, Bibliotheque biblio) {
     }
     return false;
 }
+
+Livre Bibliotheque::livreParIsbn(string isbn, Bibliotheque biblio){
+
+    if (LivreDansLaBiblioteque(isbn, biblio)){
+
+
+        Inventaire inventaireBiblio = biblio.getLivres();
+
+        Noeud* current = inventaireBiblio.getHead();
+        while (current != nullptr) {
+        if (current->getLivre().getIsbn() == isbn) {
+            return current->getLivre();
+        }
+        current = current->getSuivant();
+        }
+    }
+    else{
+        throw runtime_error("le livre n'est pas dans cette biblioteque");
+    }
+}
+
+    
+    
+
+
+void Bibliotheque::demandeLivre (string isbn, Bibliotheque nom){
+    if (LivreDansLaBiblioteque (isbn, nom)){
+        Livre l = livreParIsbn(isbn, nom);
+        this->addLivre(l);
+        l.setEtats("emprinte");
+    }
+    else{
+        throw runtime_error("le livre n'est pas dans cette biblioteque");
+    }
+}
