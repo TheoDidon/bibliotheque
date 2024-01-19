@@ -31,6 +31,7 @@ public:
     void affiche();                               
     void afficheTousLesLivres();                      
     void afficheLivresParCategorie(string categorie); 
+    bool LivreDansLaBiblioteque (string isbn, Bibliotheque biblio); /* savoir si un livre est un livre d'un bibliotheque a partire de son isbn */
     void demandeLivre(string isbn, Bibliotheque nom); /* pas fait */
     void preteLivre (Livre livre, Bibliotheque nom);
     bool estlibre(Livre livre);

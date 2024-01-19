@@ -126,3 +126,17 @@ void Bibliotheque::preteLivre(Livre livre, Bibliotheque nom){
         throw runtime_error("le livre n'est pas libre");
     }
 }
+
+bool Bibliotheque::LivreDansLaBiblioteque(string isbn, Bibliotheque biblio) {
+
+    Inventaire inventaireBiblio = biblio.getLivres();
+
+    Noeud* current = inventaireBiblio.getHead();
+    while (current != nullptr) {
+        if (current->getLivre().getIsbn() == isbn) {
+            return true;
+        }
+        current = current->getSuivant();
+    }
+    return false;
+}
