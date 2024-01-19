@@ -8,7 +8,12 @@
 
 bool Bibliotheque::categorieExiste(string cat){
 
-    vector<string>categoriesExistantes = {"album", "bande-dessinee", "roman", "poesie", "theatre"};
+    vector<string>categoriesExistantes;
+    categoriesExistantes.push_back("album");
+    categoriesExistantes.push_back("bande-dessinee");
+    categoriesExistantes.push_back("roman");
+    categoriesExistantes.push_back("poesie");
+    categoriesExistantes.push_back("theatre");
     
     return find(categoriesExistantes.begin(), categoriesExistantes.end(), cat) != categoriesExistantes.end();
 }

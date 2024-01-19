@@ -15,7 +15,7 @@ private:
 public:
             Album  (int code, string auteur, string titre, string editeur, string isbn, string public_vise, string etats, string illustration)    ;
     string  getIllustration()                                                                                                                  ;
-    void    setIllustration()                                                                                                                  ;
+    void    setIllustration(string illustration)                                                                                                                  ;
     void    affiche ()                                                                                                                  ;
 };
 

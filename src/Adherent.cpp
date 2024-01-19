@@ -3,13 +3,16 @@
 #include<iostream>
 #include<string>
 
-Adherent::Adherent(string nom, string prenom, string adresse,int id_adherent, int nb_emprunt_max, Bibliotheque bibliotheque){
+int Adherent::nb_adherent = 0;
+
+Adherent::Adherent(string nom, string prenom, string adresse, int nb_emprunt_max, Bibliotheque bibliotheque){
     this->nom = nom;
     this->prenom = prenom;
-    this->id_adherent = id_adherent;
+    this->id_adherent = nb_adherent;
     this->nb_emprunt_max = nb_emprunt_max;
     this->bibliotheque = bibliotheque;
     nb_emprunt_en_cours = 0;
+    nb_adherent++;
 }
 string Adherent::getNom(){
     return this->nom;

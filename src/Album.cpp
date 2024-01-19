@@ -12,7 +12,7 @@ Album::Album(int code, string auteur, string titre, string editeur, string isbn,
 string Album::getIllustration(){
     return this->illustration;
 }                                                     
-void    Album::setIllustration(){
+void    Album::setIllustration(string illustration){
     this->illustration = illustration;
 }                                          
 void Album::affiche (){

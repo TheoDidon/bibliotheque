@@ -1,13 +1,13 @@
 #include"Adherent.h"
 #include"Bibliotheque.h"
+#include"BandeDessinee.h"
+#include"Album.h"
 #include "Roman.h"
 #include<iostream>
 #include<string>
 
 using namespace std;
 
-void menu();
-void creeradherent();
 
 int main () {
 
@@ -15,7 +15,7 @@ int main () {
     Bibliotheque testbiblio = Bibliotheque("test_nom", "test_adresse");
 
     /*test Adherent */
-    Adherent ad = Adherent( "test_nom", "test_prenom","test_adressse",0,10,testbiblio);
+    Adherent ad = Adherent( "test_nom", "test_prenom","test_adressse",10,testbiblio);
     string nom = ad.getNom();
     cout<< "nom initial"<< nom << endl;
     ad.setNom("tt");
@@ -42,51 +42,17 @@ int main () {
 
 
 
-    /* piqué sur l'autre projet 
 
-    void menu(){
-    bool continuer = true;
-    int choix = 0;
-    do{
-        cout << "===== Menu =====" << endl;
-        cout << "1) créer un adhérent" << endl;
-        cout << "2) Afficher toutes les bibliothèques" << endl;
-        cout << "3) " << endl;
-
-        cout << "Votre choix : ";
-        cin >> choix;
-
-        switch(choix){
-            case 1:
-                creeradherent();
-                break;
-            case 2:
-                tests();
-                break;
-            case 3:
-                fixture();
-                break;
-            default:
-                cout << endl <<  "ERREUR veuillez reessayer" << endl;
-        }
-
-        cout << endl;
-    }while(continuer);
-    }
-void creeradherent(){
-    cout<<"création d'un adhérent"<< endl;
-    cout<<"entrez le nom"<< endl;
-    cin >> nom ;
-    cout<<"entrez le prenom"<<endl;
-    cin >> prenom;
-    cout<<"entrez l'adresse"<<endl;
-    cin >> adresse;
-    cout<<"entrez le nombre d'emprunt maximal"<<endl;
-    cin >> nb_emprunt_max;
-    cout>>"entrez le nom de la bibliothèque"<<endl;
-    cin >> nom_biblio;
-*/
-
+    Bibliotheque municipale = Bibliotheque("Municipale","adresse biblio municipale");
+    Adherent a1 = Adherent("dupont","pierre","adresse a1",10, municipale);
+    Adherent a2 = Adherent("dupont","Paul","adresse a2",10, municipale);
+    Adherent a3 = Adherent("dupont","Jacques","adresse a3",10, municipale);
+    Livre l1 = Livre(0001,"Victor Hugo","Les misérables","édition jungle","isbn_au_pif","ado/adulte","très bon");
+    Livre l2 = Livre(0002,"Stendhal","Le rouge et le Noir","folio classique","isbn_au_pif_2","adulte","très bon");
+    Album l3 = Album(0003,"Pesquet","La terre entre nos main","Flamarion","isbn_au_pif_3","tous_publics","neuf","photos de Pesquet");
+    BandeDessinee l4 = BandeDessinee(0004,"René Goscinny","Astérix le gaulois","hachette","isbn_au_pif_4","enfance","correct","Albert Uderzo");
 
     return 0;
 }
+
+

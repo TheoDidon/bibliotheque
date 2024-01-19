@@ -8,6 +8,7 @@ using namespace std;
 
 class Adherent {
 private:
+    static int      nb_adherent    ;
     string          nom             ;
     string          prenom          ;
     string          adresse         ;
@@ -18,7 +19,7 @@ private:
     bool            peutEmpruter();
 
 public:
-                    Adherent(string nom, string prenom, string adresse,int id_adherent, int nb_emprunt_max, Bibliotheque bibliotheque)  ;
+                    Adherent(string nom, string prenom, string adresse, int nb_emprunt_max, Bibliotheque bibliotheque)  ;
     string          getNom()                                                                                                            ;
     string          getprenom()                                                                                                         ;
     string          getAdresse()                                                                                                        ;
