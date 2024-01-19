@@ -116,3 +116,7 @@ void Bibliotheque::affiche(){
     cout<<"nom : "<< nom << "adresse : " << adresse << endl;
     inventaire.affiche();
 }
+
+void Bibliotheque::preteLivre(string isbn, Bibliotheque nom){
+    
+}

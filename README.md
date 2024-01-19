@@ -19,7 +19,7 @@ git add .
 
 git commit -m "nom du commit"
 
-git push
+git push 
 
 Normalement le git push ne fonctionne pas la première fois et propose une commande à copier-coller avec un truc du style --set-upstream, il faut juste la copier coller et ça fonctionne
 
