@@ -122,7 +122,7 @@ cout << "7) une bibliotheque rend les livres libres qui lui sont prêtés" << en
 }
 
 void afficherLivreBiblio(Bibliotheque nom){
-    nom.afficheTousLesLivres()
+    nom.afficheTousLesLivres();
 }
 void adherentEmprunte(int code){
     cout<<"livres empruntés par l'adhérent avant"<<endl;

@@ -5,6 +5,7 @@
 #include <vector>
 #include <algorithm>
 
+vector<Bibliotheque> listeBibliotheque;
 
 bool Bibliotheque::categorieExiste(string cat){
 
@@ -22,12 +23,14 @@ Bibliotheque::Bibliotheque(){
     nom = "Nom par defaut";
     adresse = "La ou elle est";
     inventaire = Inventaire();
+    listeBibliotheque.push_back(*this);
 }
 
 Bibliotheque::Bibliotheque(string nom, string  adresse){
     nom = this->nom;
     adresse = this->adresse;
     inventaire = Inventaire();
+    listeBibliotheque.push_back(*this);
 }
 
 string Bibliotheque::getNom(){
@@ -133,14 +136,11 @@ bool Bibliotheque::LivreDansLaBiblioteque(string isbn, Bibliotheque biblio) {
     return false;
 }
 
-Livre Bibliotheque::livreParIsbn(string isbn, Bibliotheque biblio){
+Livre Bibliotheque::livreParIsbn(string isbn){
 
-    if (LivreDansLaBiblioteque(isbn, biblio)){
+    if (LivreDansLaBiblioteque(isbn, *this)){
 
-
-        Inventaire inventaireBiblio = biblio.getLivres();
-
-        Noeud* current = inventaireBiblio.getHead();
+        Noeud* current = inventaire.getHead();
         while (current != nullptr) {
         if (current->getLivre().getIsbn() == isbn) {
             return current->getLivre();
@@ -155,7 +155,7 @@ Livre Bibliotheque::livreParIsbn(string isbn, Bibliotheque biblio){
 
 void Bibliotheque::demandeLivre (string isbn, Bibliotheque nom){
     if (LivreDansLaBiblioteque (isbn, nom)){
-        Livre l = livreParIsbn(isbn, nom);
+        Livre l = livreParIsbn(isbn);
         this->addLivre(l);
         l.setEtats("emprunté");
     }
@@ -166,7 +166,7 @@ void Bibliotheque::demandeLivre (string isbn, Bibliotheque nom){
 
 void Bibliotheque::preteLivre(string isbn, Bibliotheque nom){
     
-    Livre livre = livreParIsbn( isbn ,*this);
+    Livre livre = livreParIsbn( isbn );
     
     if (estlibre(livre)){
         nom.addLivre(livre);
@@ -192,17 +192,28 @@ void Bibliotheque::supprimeLivre (int code){
     cout << "le livre n'est pas dans cette biblioteque" << endl;
 }
 
+
 void Bibliotheque::rendLivre(){
-    /* fonction qui rend tout les livre emprinte a d'autre biblioteque */
 
     Inventaire inventaireBiblio = this->getLivres();
+
     Noeud* current = inventaireBiblio.getHead();
+    
     while (current != nullptr) {
+    
         if (current->getLivre().getNomBiblioOrigine() != this->nom ) {
-            Livre livre = current->getLivre();
-            if (livre.getEtats() == "libre"){
-                string nombBiblioOrigine = livre.getNomBiblioOrigine();
-                /* completer pour trouver la biblioteque correspondante et rendre le livre */
+    
+            if (current->getLivre().getEtats() == "libre"){
+                inventaireBiblio.enleve(current->getLivre());
+                for (Bibliotheque& bibliotheque : listeBibliotheque){
+                    auto it = find_if(listeBibliotheque.begin(), listeBibliotheque.end(), [&bibliotheque](Bibliotheque b) { return b.getNom() == bibliotheque.getNom(); });
+                    if (it != listeBibliotheque.end()){
+                        bibliotheque.livreParIsbn(current->getLivre().getIsbn()).setEtats("libre");
+                    }
+                }
+            }
+            else {
+                cout << "Le livre n'a pas encore été rendu à notre bibliotheque" << endl;
             }
         }
     }
