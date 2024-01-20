@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include "Bibliotheque.h"
+#include "Inventaire.h"
 
 using namespace std;
 
@@ -17,9 +18,11 @@ private:
     Bibliotheque    bibliotheque    ;
     int             nb_emprunt_en_cours;
     bool            peutEmpruter();
+    Inventaire      liste_emprunt_en_cours;
 
 public:
                     Adherent(string nom, string prenom, string adresse, int nb_emprunt_max, Bibliotheque bibliotheque)  ;
+                    ~Adherent();
     string          getNom()                                                                                                            ;
     string          getprenom()                                                                                                         ;
     string          getAdresse()                                                                                                        ;
@@ -33,7 +36,8 @@ public:
     void            setNbEmpruntMax(int nb_emprunt_max)                                                                                 ;
     void            setBibliotheque(Bibliotheque bibliotheque)                                                                          ;
     friend ostream& operator<<(ostream& out, const Adherent& a)                                                                         ;
-    void            emprunte(int code); /* pas fait */
+    void            emprunte(int code);/* ne fonctionne pas */
+    void            afficheEmprunt();
 };
 
 #endif /* ADHERENT_H */

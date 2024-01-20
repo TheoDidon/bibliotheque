@@ -14,6 +14,11 @@ Adherent::Adherent(string nom, string prenom, string adresse, int nb_emprunt_max
     nb_emprunt_en_cours = 0;
     nb_adherent++;
 }
+
+Adherent::~Adherent(){
+    nb_adherent--;
+}
+
 string Adherent::getNom(){
     return this->nom;
 }
@@ -84,4 +89,39 @@ bool Adherent::peutEmpruter(){
         cout<<"l'adhérent a emprunté trop de livre";
         return false;
     }
+}
+
+void Adherent::emprunte(int code){
+
+    if (peutEmpruter()){
+        cout<<"check1";
+        Inventaire inventaire=bibliotheque.getLivres();
+        inventaire.affiche();
+        Livre livre;
+        cout<<"check2";
+        // récupérer objet Livre à emprunter à partir de son code
+        Noeud* current = inventaire.getHead();
+
+            while( current != nullptr){
+                Livre current_book = current->getLivre();
+
+                if ( current_book.getCode()==code ){
+                    livre = current->getLivre();
+                }
+            }
+
+        cout<<"check3";
+        if (bibliotheque.estlibre(livre)){
+            nb_emprunt_en_cours ++;
+            bibliotheque.removeLivre(livre);
+            livre.setEtats("emprunté");
+            cout<<"check4";		
+            liste_emprunt_en_cours.ajoute(livre);
+        }
+    }
+
+}
+
+void Adherent::afficheEmprunt(){
+    liste_emprunt_en_cours.affiche();
 }
