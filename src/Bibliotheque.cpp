@@ -117,6 +117,72 @@ void Bibliotheque::affiche(){
     inventaire.affiche();
 }
 
-void Bibliotheque::preteLivre(string isbn, Bibliotheque nom){
-    
+void Bibliotheque::preteLivre(Livre livre, Bibliotheque nom){
+    if (estlibre(livre)){
+        nom.addLivre(livre);
+        livre.setEtats ("prete");
+    }
+    else{
+        throw runtime_error("le livre n'est pas libre");
+    }
+}
+
+bool Bibliotheque::LivreDansLaBiblioteque(string isbn, Bibliotheque biblio) {
+
+    Inventaire inventaireBiblio = biblio.getLivres();
+
+    Noeud* current = inventaireBiblio.getHead();
+    while (current != nullptr) {
+        if (current->getLivre().getIsbn() == isbn) {
+            return true;
+        }
+        current = current->getSuivant();
+    }
+    return false;
+}
+
+Livre Bibliotheque::livreParIsbn(string isbn, Bibliotheque biblio){
+
+    if (LivreDansLaBiblioteque(isbn, biblio)){
+
+
+        Inventaire inventaireBiblio = biblio.getLivres();
+
+        Noeud* current = inventaireBiblio.getHead();
+        while (current != nullptr) {
+        if (current->getLivre().getIsbn() == isbn) {
+            return current->getLivre();
+        }
+        current = current->getSuivant();
+        }
+    }
+    else{
+        throw runtime_error("le livre n'est pas dans cette biblioteque");
+    }
+}
+
+void Bibliotheque::demandeLivre (string isbn, Bibliotheque nom){
+    if (LivreDansLaBiblioteque (isbn, nom)){
+        Livre l = livreParIsbn(isbn, nom);
+        this->addLivre(l);
+        l.setEtats("emprinte");
+    }
+    else{
+        throw runtime_error("le livre n'est pas dans cette biblioteque");
+    }
+}
+
+void Bibliotheque::supprimeLivre (int code){
+
+    Inventaire inventaireBiblio = this->getLivres();
+
+    Noeud* current = inventaireBiblio.getHead();
+    while (current != nullptr) {
+        if (current->getLivre().getCode() == code) {
+            Livre livreCorrespondant = current->getLivre();
+            this->removeLivre(livreCorrespondant);
+        }
+        current = current->getSuivant();
+    }
+    throw runtime_error("le livre n'est pas dans cette biblioteque");
 }
