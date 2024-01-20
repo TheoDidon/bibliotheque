@@ -113,7 +113,7 @@ void Adherent::emprunte(int code){
             nb_emprunt_en_cours ++;
             bibliotheque.removeLivre(livre);
             livre.setEtats("emprunté");		
-            liste_emprunt_en_cours.ajouter(livre);
+            liste_emprunt_en_cours.ajoute(livre);
         }
     }
 
