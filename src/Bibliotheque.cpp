@@ -117,15 +117,7 @@ void Bibliotheque::affiche(){
     inventaire.affiche();
 }
 
-void Bibliotheque::preteLivre(Livre livre, Bibliotheque nom){
-    if (estlibre(livre)){
-        nom.addLivre(livre);
-        livre.setEtats ("prete");
-    }
-    else{
-        throw runtime_error("le livre n'est pas libre");
-    }
-}
+
 
 bool Bibliotheque::LivreDansLaBiblioteque(string isbn, Bibliotheque biblio) {
 
@@ -168,7 +160,20 @@ void Bibliotheque::demandeLivre (string isbn, Bibliotheque nom){
         l.setEtats("emprinte");
     }
     else{
-        throw runtime_error("le livre n'est pas dans cette biblioteque");
+        cout << "le livre n'est pas dans cette biblioteque" << endl;
+    }
+}
+
+void Bibliotheque::preteLivre(string isbn, Bibliotheque nom){
+    
+    Livre livre = livreParIsbn( isbn ,*this);
+    
+    if (estlibre(livre)){
+        nom.addLivre(livre);
+        livre.setEtats ("prete");
+    }
+    else{
+        cout << "le livre n'est pas libre" << endl;
     }
 }
 
@@ -184,5 +189,23 @@ void Bibliotheque::supprimeLivre (int code){
         }
         current = current->getSuivant();
     }
-    throw runtime_error("le livre n'est pas dans cette biblioteque");
+    cout << "le livre n'est pas dans cette biblioteque" << endl;
 }
+
+void Bibliotheque::rendLivre(){
+    /* fonction qui rend tout les livre emprinte a d'autre biblioteque */
+
+    Inventaire inventaireBiblio = this->getLivres();
+    Noeud* current = inventaireBiblio.getHead();
+    while (current != nullptr) {
+        if (current->getLivre().getNomBiblioOrigine() != this->nom ) {
+            Livre livre = current->getLivre();
+            if (livre.getEtats() == "libre"){
+                string nombBiblioOrigine = livre.getNomBiblioOrigine();
+                /* completer pour trouver la biblioteque correspondante et rendre le livre */
+            }
+        }
+    }
+}
+
+
