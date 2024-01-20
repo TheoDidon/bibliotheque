@@ -161,10 +161,6 @@ Livre Bibliotheque::livreParIsbn(string isbn, Bibliotheque biblio){
     }
 }
 
-    
-    
-
-
 void Bibliotheque::demandeLivre (string isbn, Bibliotheque nom){
     if (LivreDansLaBiblioteque (isbn, nom)){
         Livre l = livreParIsbn(isbn, nom);
@@ -174,4 +170,19 @@ void Bibliotheque::demandeLivre (string isbn, Bibliotheque nom){
     else{
         throw runtime_error("le livre n'est pas dans cette biblioteque");
     }
+}
+
+void Bibliotheque::supprimeLivre (int code){
+
+    Inventaire inventaireBiblio = this->getLivres();
+
+    Noeud* current = inventaireBiblio.getHead();
+    while (current != nullptr) {
+        if (current->getLivre().getCode() == code) {
+            Livre livreCorrespondant = current->getLivre();
+            this->removeLivre(livreCorrespondant);
+        }
+        current = current->getSuivant();
+    }
+    throw runtime_error("le livre n'est pas dans cette biblioteque");
 }
