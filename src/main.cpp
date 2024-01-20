@@ -48,7 +48,7 @@ int main () {
     Adherent a1 = Adherent("dupont","pierre","adresse a1",10, municipale);
     Adherent a2 = Adherent("dupont","Paul","adresse a2",10, municipale);
     Adherent a3 = Adherent("dupont","Jacques","adresse a3",10, municipale);
-    Livre l1 = Livre(0001,"Victor Hugo","Les misérables","édition jungle","isbn_au_pif","ado/adulte","libre");
+    Livre l1 = Livre(0001,"Victor Hugo","Les misérables","édition jungle","isbn_au_pif","ado/adulte","emprunte");
     Livre l2 = Livre(0002,"Stendhal","Le rouge et le Noir","folio classique","isbn_au_pif_2","adulte","libre");
     Album l3 = Album(0003,"Pesquet","La terre entre nos main","Flamarion","isbn_au_pif_3","tous_publics","libre","photos de Pesquet");
     BandeDessinee l4 = BandeDessinee(0004,"René Goscinny","Astérix le gaulois","hachette","isbn_au_pif_4","enfance","libre","Albert Uderzo");
@@ -62,6 +62,9 @@ int main () {
     a1.emprunte(0002);
     a1.afficheEmprunt();
 
+    if (municipale.estlibre(l1)){
+        cout << "Il est libre" << endl;
+    }
 
     return 0;
 }

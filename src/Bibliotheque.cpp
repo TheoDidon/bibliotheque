@@ -169,6 +169,7 @@ void Bibliotheque::preteLivre(string isbn, Bibliotheque nom){
     Livre livre = livreParIsbn( isbn ,*this);
     
     if (estlibre(livre)){
+        livre.setEtats("libre");
         nom.addLivre(livre);
         livre.setEtats ("prete");
     }
