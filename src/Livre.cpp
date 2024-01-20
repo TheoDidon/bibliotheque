@@ -8,7 +8,7 @@ using namespace std;
 Livre::Livre(){
 }
 
-Livre::Livre(int code, string auteur, string titre, string editeur, string isbn, string public_vise, string etats){
+Livre::Livre(int code, string auteur, string titre, string editeur, string isbn, string public_vise, string etats, string biblioO, string biblioA ){
     this->code = code;
     this->auteur = auteur;
     this->titre = titre;
@@ -56,6 +56,14 @@ string Livre::getEtats(){
 }
 string Livre::getCategorie(){
     return categorie;
+}
+
+string Livre::getNomBiblioActuel (){
+    return nomBiblioActuel;
+}
+
+string Livre::getNomBiblioOrigine (){
+    return nomBiblioOrigine;
 }
 
 void Livre::setCode(int c){
