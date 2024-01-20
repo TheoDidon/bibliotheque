@@ -157,7 +157,7 @@ void Bibliotheque::demandeLivre (string isbn, Bibliotheque nom){
     if (LivreDansLaBiblioteque (isbn, nom)){
         Livre l = livreParIsbn(isbn, nom);
         this->addLivre(l);
-        l.setEtats("emprinte");
+        l.setEtats("emprunté");
     }
     else{
         cout << "le livre n'est pas dans cette biblioteque" << endl;

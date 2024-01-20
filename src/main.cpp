@@ -42,10 +42,47 @@ int main () {
     municipale.addLivre(l3);
     municipale.addLivre(l4);
 
-        /*      MENU    */
+        /*      MENU    */ /* le menu marche pas je bidouille*/
 
-    menu();
+cout << "1) Afficher tous les livres d'une bibliotheque" << endl;
+municipale.afficheTousLesLivres();
 
+cout << "2) un adhérent emprunte un livre" << endl;
+
+    cout<<"livres empruntés par l'adhérent avant"<<endl;
+        a1.afficheEmprunt();
+        a1.emprunte(1);
+        cout<<"livres empruntés par l'adhérent après"<<endl;
+        a1.afficheEmprunt();
+
+cout << "3) un adhérent rend un livre" << endl; /* pas de fonction rendre livre pour un adherent*/
+
+
+
+cout << "4) une bibliotheque demande un livre à une autre " << endl;
+    cout<<"tous les livres de la bibliotheque avant emprunt"<<endl;
+    municipale.afficheTousLesLivres();
+    municipale.demandeLivre("0a", testbiblio);
+    cout<<"tous les livres de la bibliotheque après emprunt"<<endl;
+    municipale.afficheTousLesLivres();
+
+cout << "5) une bibliotheque achète un nouveau livre" << endl;
+    Livre livreacheté = Livre(5, "auteurtoto", "toto","editeurtoto","isbntoto","touspublics","libre");
+    cout<<"tous les livres de la bibliotheque avant achat"<<endl;
+    municipale.afficheTousLesLivres();
+    municipale.addLivre(livreacheté);
+    cout<<"tous les livres de la bibliotheque après achat"<<endl;
+    municipale.afficheTousLesLivres();
+
+cout << "6) une bibliotheque supprime un livre" << endl;
+   cout<<"tous les livres de la bibliotheque avant suppression"<<endl;
+    municipale.afficheTousLesLivres();
+    municipale.supprimeLivre(5);
+    cout<<"tous les livres de la bibliotheque après suppression"<<endl;
+    municipale.afficheTousLesLivres();
+
+
+cout << "7) une bibliotheque rend les livres libres qui lui sont prêtés" << endl;
 
     return 0;
 }
@@ -71,10 +108,10 @@ int main () {
                 afficherLivreBiblio(municipale);
                 break;
             case 2:
-                a1.adherentEmprunte(1);
+                adherentEmprunte(1);
                 break;
             case 3:
-                fixture();
+            
                 break;
             default:
                 cout << endl <<  "#### Choix invalide." << endl;
@@ -89,8 +126,8 @@ void afficherLivreBiblio(Bibliotheque nom){
 }
 void adherentEmprunte(int code){
     cout<<"livres empruntés par l'adhérent avant"<<endl;
-    afficheEmprunt();
-    enprunt(code);
+    a1.afficheEmprunt();
+    a1.enprunt(code);
     cout<<"livres empruntés par l'adhérent après"<<endl;
     afficheEmprunt();
 
