@@ -90,3 +90,31 @@ bool Adherent::peutEmpruter(){
         return false;
     }
 }
+
+void Adherent::emprunte(int code){
+
+    if (peutEmpruter()){
+        Inventaire inventaire=bibliotheque.getLivres();
+        Livre livre;
+
+        // récupérer objet Livre à emprunter à partir de son code
+        Noeud* current = inventaire.getHead();
+
+            while( current != nullptr){
+                Livre current_book = current->getLivre();
+
+                if ( current_book.getCode()==code ){
+                    livre = current->getLivre();
+                }
+            }
+
+
+        if (bibliotheque.estlibre(livre)){
+            nb_emprunt_en_cours ++;
+            bibliotheque.removeLivre(livre);
+            livre.setEtats("emprunté");		
+            liste_emprunt_en_cours.ajouter(livre);
+        }
+    }
+
+}

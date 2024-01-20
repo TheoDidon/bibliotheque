@@ -14,7 +14,7 @@ protected:
     string  editeur     ;
     string  isbn        ;
     string  public_vise ;
-    string  etats       ;
+    string  etats       ;/* libre, emprunté, prêté*/
     string  categorie   ;
     bool    etatExiste (string etatPropose) ;
     /* au vu des autres fonctions demandées il faut peut être faire un argument avec sa biliotheque d'origine*/

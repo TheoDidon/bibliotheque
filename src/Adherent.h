@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include "Bibliotheque.h"
+#include "Inventaire.h"
 
 using namespace std;
 
@@ -17,6 +18,7 @@ private:
     Bibliotheque    bibliotheque    ;
     int             nb_emprunt_en_cours;
     bool            peutEmpruter();
+    Inventaire      liste_emprunt_en_cours;
 
 public:
                     Adherent(string nom, string prenom, string adresse, int nb_emprunt_max, Bibliotheque bibliotheque)  ;
