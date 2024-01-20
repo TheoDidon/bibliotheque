@@ -36,7 +36,8 @@ public:
     void            setNbEmpruntMax(int nb_emprunt_max)                                                                                 ;
     void            setBibliotheque(Bibliotheque bibliotheque)                                                                          ;
     friend ostream& operator<<(ostream& out, const Adherent& a)                                                                         ;
-    void            emprunte(int code); /* pas fait */
+    void            emprunte(int code);/* ne fonctionne pas */
+    void            afficheEmprunt();
 };
 
 #endif /* ADHERENT_H */

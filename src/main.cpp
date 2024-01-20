@@ -38,7 +38,10 @@ int main () {
     testbiblio.addLivre(livre3);
     testbiblio.addLivre(livre4);
 
+    cout<<"affichage de tous les livres"<<endl;
     testbiblio.afficheTousLesLivres();
+    //cout<<"affichage par catégorie"<<endl;
+    //testbiblio.afficheLivresParCategorie();  pb faurt définir ce que sont les catégories
 
 
     Bibliotheque municipale = Bibliotheque("Municipale","adresse biblio municipale");
@@ -49,6 +52,16 @@ int main () {
     Livre l2 = Livre(0002,"Stendhal","Le rouge et le Noir","folio classique","isbn_au_pif_2","adulte","libre");
     Album l3 = Album(0003,"Pesquet","La terre entre nos main","Flamarion","isbn_au_pif_3","tous_publics","libre","photos de Pesquet");
     BandeDessinee l4 = BandeDessinee(0004,"René Goscinny","Astérix le gaulois","hachette","isbn_au_pif_4","enfance","libre","Albert Uderzo");
+
+    municipale.addLivre(l1);
+    municipale.addLivre(l2);
+    municipale.addLivre(l3);
+    municipale.addLivre(l4);
+
+    a1.afficheEmprunt();
+    a1.emprunte(0002);
+    a1.afficheEmprunt();
+
 
     return 0;
 }

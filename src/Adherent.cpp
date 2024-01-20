@@ -94,9 +94,11 @@ bool Adherent::peutEmpruter(){
 void Adherent::emprunte(int code){
 
     if (peutEmpruter()){
+        cout<<"check1";
         Inventaire inventaire=bibliotheque.getLivres();
+        inventaire.affiche();
         Livre livre;
-
+        cout<<"check2";
         // récupérer objet Livre à emprunter à partir de son code
         Noeud* current = inventaire.getHead();
 
@@ -108,13 +110,18 @@ void Adherent::emprunte(int code){
                 }
             }
 
-
+        cout<<"check3";
         if (bibliotheque.estlibre(livre)){
             nb_emprunt_en_cours ++;
             bibliotheque.removeLivre(livre);
-            livre.setEtats("emprunté");		
+            livre.setEtats("emprunté");
+            cout<<"check4";		
             liste_emprunt_en_cours.ajoute(livre);
         }
     }
 
+}
+
+void Adherent::afficheEmprunt(){
+    liste_emprunt_en_cours.affiche();
 }
