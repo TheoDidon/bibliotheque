@@ -68,10 +68,10 @@ int main () {
 
         switch(choix){
             case 1:
-                afficherLivreBiblio(municipale)
+                afficherLivreBiblio(municipale);
                 break;
             case 2:
-                a1.adherentEmprunte(1)
+                a1.adherentEmprunte(1);
                 break;
             case 3:
                 fixture();
@@ -88,10 +88,10 @@ void afficherLivreBiblio(Bibliotheque nom){
     nom.afficheTousLesLivres()
 }
 void adherentEmprunte(int code){
-    cout<<"livres empruntés par l'adhérent avant"
+    cout<<"livres empruntés par l'adhérent avant"<<endl;
     afficheEmprunt();
     enprunt(code);
-    cout<<"livres empruntés par l'adhérent après"
+    cout<<"livres empruntés par l'adhérent après"<<endl;
     afficheEmprunt();
 
 }
