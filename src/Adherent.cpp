@@ -125,3 +125,16 @@ void Adherent::emprunte(int code){
 void Adherent::afficheEmprunt(){
     liste_emprunt_en_cours.affiche();
 }
+void Adherent::rendlivre(Livre livre){
+    Inventaire inv = this->liste_emprunt_en_cours;
+     Noeud* current = inv.getHead();
+
+            while( current != nullptr){
+                Livre current_book = current->getLivre();
+
+                if ( current_book.getCode()==livre.getCode() ){
+                    inv.enleve(current_book);
+                }
+            }
+        livre.setEtats("libre");
+}

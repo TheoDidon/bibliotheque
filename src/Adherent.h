@@ -38,6 +38,7 @@ public:
     friend ostream& operator<<(ostream& out, const Adherent& a)                                                                         ;
     void            emprunte(int code);/* ne fonctionne pas */
     void            afficheEmprunt();
+    void            rendlivre(Livre livre);
 };
 
 #endif /* ADHERENT_H */
